@@ -6,6 +6,12 @@ const writeTodaysDate = function () {
     $(`#currentDay`).text(today);
 }
 
+const writeCurrentTime = function () {
+    const currentTime = moment().format(`H:mm:ss`);
+
+    $(`#clock`).text(currentTime);
+}
+
 const buildTimeBlocks = function () {
     // Create time blocks from hour 9 to 17
     const times = [`9AM`, `10AM`, `11AM`, `12PM`, `1PM`, `2PM`, `3PM`, `4PM`, `5PM`];
@@ -82,6 +88,11 @@ const loadFromLS = function () {
 const buildEverything = function () {
     // Set today's date in the text
     writeTodaysDate();
+    
+    // Set current time
+    writeCurrentTime();
+    // Update every second
+    setInterval(writeCurrentTime, 1000);
 
     // Build the rows
     buildTimeBlocks();
