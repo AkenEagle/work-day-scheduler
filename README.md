@@ -2,7 +2,7 @@
 
 ## PROJECT COMPLETE
 
-LINK: [click here](https://akeneagle.github.io/work-day-scheduler/)
+LINK: [click here](https://akeneagle.github.io/work-day-scheduler/index.html)
 
 ## DESCRIPTION
 
