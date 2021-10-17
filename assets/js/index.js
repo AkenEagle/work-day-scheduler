@@ -30,7 +30,7 @@ const buildTimeBlocks = function () {
         }
 
         // Save button
-        const divSaveBTN = $(`<div class="saveBtn"><i class="fas fa-save"></i></div>`);
+        const divSaveBTN = $(`<div class="saveBtn" data-time="${i+9}"><i class="fas fa-save"></i></div>`);
 
         // Append the elements
         divTimeBlock.append(divTBTime);
@@ -40,12 +40,19 @@ const buildTimeBlocks = function () {
     }
 }
 
+const saveToLS = function (event) {
+    console.log($(event.target).attr("data-time"))
+}
+
 const buildEverything = function () {
     // Set today's date in the text
     writeTodaysDate();
 
     // Build the rows
     buildTimeBlocks();
+
+    // Add event listener
+    $(".saveBtn").click(saveToLS);
 }
 
 // Build time blocks on load page
