@@ -84,8 +84,17 @@ i {
 }
 
 @media only screen and (max-width: 600px) {
+  .hour {
+    width: 100px;
+  }
+
   .row {
-    width: 200px;
-    
+    width: 350px;
+    flex-wrap: nowrap;
+    margin: auto;
+  }
+
+  .saveBtn {
+    width: 100px;
   }
 }
